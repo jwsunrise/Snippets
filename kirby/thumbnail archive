@@ -1,0 +1,9 @@
+<thumbs>
+  <?php foreach ($page->children()->listed()->sortBy('date', 'desc') as $note): ?>
+    <?php if($image = $note->image()): ?>        
+      <a href="<?= $note->url() ?>">
+        <img src="<?= $image->crop(200,100)->url() ?>" alt="">
+      </a>
+    <?php endif ?>
+  <?php endforeach ?>
+</thumbs>
