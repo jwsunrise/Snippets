@@ -7,3 +7,14 @@
     <?php endif ?>
   <?php endforeach ?>
 </thumbs>
+
+
+<thumbs>
+  <?php foreach(page('photos')->children()->listed()->sortBy('date', 'desc')->limit('5') as $note): ?>
+    <?php if($image = $note->image()): ?>
+      <a href="<?= $note->url() ?>">
+        <img src="<?= $image->crop(100,100)->url() ?>" alt="">
+      </a>
+    <?php endif ?>
+  <?php endforeach ?>
+</thumbs>
