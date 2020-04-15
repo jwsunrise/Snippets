@@ -1,11 +1,11 @@
 <?php snippet('header') ?>
 
-<main>
+  <main>
 
-<div class="text">
-  <?= $page->text()->kt() ?>
-</div>
+    <div class="text">
+       <?= $page->text()->kt() ?>
+    </div>
 
-</main>
+  </main>
 
 <?php snippet('footer') ?>
